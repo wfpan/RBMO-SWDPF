@@ -122,7 +122,7 @@ function [BestValue, Xfood, Conv_selected] = IMRBMO(popsize, dim, T, lb, ub, fob
         % Food storage
         [fitness, pop, fitness_old, X_old] = Food_storage(fitness, pop, fitness_old, X_old); % Eq. (7)
         %%   随机游走   
-           if(t>5&& Conv_t(t)== Conv_t(t-5))
+           if(t>1&& Conv_t(t)== Conv_t(t-1))
                 pop=random_walk(pop,Xfood,t,T);
                 % Boundary handling
                 pop = boundaryCheck(pop, lb, ub);

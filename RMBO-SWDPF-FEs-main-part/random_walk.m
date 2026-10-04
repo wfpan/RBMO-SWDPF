@@ -1,7 +1,7 @@
 function Xnew=random_walk(X,XBest,t,tmax)
     row=size(X,1);
     cow=size(X,2);
-    c=6;
+    c=2;
     a=(t/tmax)^2;
     for i=1:row
         for j=1:cow
